@@ -1,12 +1,19 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement; // Thư viện để quản lý chuyển cảnh
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class MenuController : MonoBehaviour
 {
-    // Hàm này sẽ gọi khi bấm nút Bài 1a
-    public void LoadLesson1a()
+    // Hàm này chỉ nhận tên màn chơi và đợi một chút rồi mới load
+    public void LoadSceneWithDelay(string sceneName)
     {
-        SceneManager.LoadScene("Less1a");
-        // Lưu ý: "ThiNghiem1a" phải khớp y hệt tên Scene thí nghiệm của bạn
+        StartCoroutine(WaitToLoad(sceneName));
+    }
+
+    IEnumerator WaitToLoad(string sceneName)
+    {
+        // Đợi 0.25 giây để tiếng click kịp phát ra [cite: 2026-02-28]
+        yield return new WaitForSeconds(0.25f);
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Less1a.unity
     guid: 1e4f26497cf8c8349b37929501b29cf0
+  - enabled: 1
+    path: Assets/Scenes/Less2a.unity
+    guid: ede796177d9b1fd4ab776ee983c5164c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0
